@@ -5,11 +5,13 @@
   "scripts": {
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "start:ios": "react-native run-ios",
+    "start:android": "react-native run-android"
   },
   "dependencies": {
-    "react": "16.8.6",
-    "react-native": "0.60.5"
+    "react": "16.9.0",
+    "react-native": "0.61.3"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -27,6 +29,6 @@
   },
   "husky": {
     "pre-commit": "npm run lint",
-    "pre-push": "npm run test"    
+    "pre-push": "npm run test"
   }
 }
