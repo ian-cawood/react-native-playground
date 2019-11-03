@@ -14,7 +14,8 @@ import {Header} from 'react-native/Libraries/NewAppScreen'
 
 import styles from './Home.styles'
 
-const Home = () => {
+const Home = ({navigation}) => {
+  const {navigate} = navigation
   return (
     <Fragment>
       <StatusBar barStyle="dark-content" />
@@ -25,7 +26,11 @@ const Home = () => {
           <Header />
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
-              <Button style={styles.sectionTitle} title="Secrets" />
+              <Button
+                style={styles.sectionTitle}
+                title="Secrets"
+                onPress={() => navigate('Secrets')}
+              />
             </View>
           </View>
         </ScrollView>
