@@ -3,9 +3,9 @@ import {View} from 'react-native'
 import {ListItem} from 'react-native-elements'
 
 import ENV_DATA from '../../../env.json'
-import ENV from '../../common/utils/env.utils'
+import env from '../../common/utils/env.utils'
 
-const environment = ENV(ENV_DATA)
+const environment = env(ENV_DATA)
 
 const list = [
   {
@@ -21,7 +21,12 @@ const list = [
 const Secrets = () => (
   <View>
     {list.map((l, i) => (
-      <ListItem key={i} title={l.name} subtitle={l.subtitle} bottomDivider />
+      <ListItem
+        key={i}
+        title={l.name}
+        subtitle={l.subtitle || 'No Secret Found'}
+        bottomDivider
+      />
     ))}
   </View>
 )
