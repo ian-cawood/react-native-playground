@@ -1,0 +1,5 @@
+creation_rules:
+        - path_regex: \.prod\.json$
+          kms: 'arn:aws:kms:us-west-2:026569114733:key/538583b4-2c41-41c6-a3a3-9392e55a7e00'
+
+        - kms: 'arn:aws:kms:us-west-2:026569114733:key/538583b4-2c41-41c6-a3a3-9392e55a7e00'
